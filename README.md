@@ -34,7 +34,7 @@ A desktop-based Hospital Patient Management System developed using **VB.NET Wind
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+   git clone https://github.com/Mwema-svg/Hospital-Management-System.git
    ```
 
 2. Open the solution file in Visual Studio.
