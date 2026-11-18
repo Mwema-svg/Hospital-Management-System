@@ -1,0 +1,3 @@
+﻿CREATE TABLE Doctors
+(
+DoctorsID INT IDENTITY(1,1)
