@@ -1,0 +1,6 @@
+
+.vs/
+bin/
+obj/
+
+*.vbproj.user

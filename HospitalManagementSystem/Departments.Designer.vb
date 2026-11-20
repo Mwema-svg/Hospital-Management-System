@@ -47,7 +47,7 @@ Partial Class Departments
         ' 
         lblDepartments.AutoSize = True
         lblDepartments.Font = New Font("Segoe UI", 9F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        lblDepartments.Location = New Point(289, 9)
+        lblDepartments.Location = New Point(556, 9)
         lblDepartments.Name = "lblDepartments"
         lblDepartments.Size = New Size(144, 25)
         lblDepartments.TabIndex = 0
@@ -63,7 +63,7 @@ Partial Class Departments
         ' 
         ' txtDepartmentName
         ' 
-        txtDepartmentName.Location = New Point(220, 175)
+        txtDepartmentName.Location = New Point(671, 118)
         txtDepartmentName.Name = "txtDepartmentName"
         txtDepartmentName.Size = New Size(150, 31)
         txtDepartmentName.TabIndex = 2
@@ -71,7 +71,7 @@ Partial Class Departments
         ' lblDepartmentName
         ' 
         lblDepartmentName.AutoSize = True
-        lblDepartmentName.Location = New Point(35, 175)
+        lblDepartmentName.Location = New Point(478, 121)
         lblDepartmentName.Name = "lblDepartmentName"
         lblDepartmentName.Size = New Size(159, 25)
         lblDepartmentName.TabIndex = 4
@@ -80,7 +80,7 @@ Partial Class Departments
         ' cmbHeadOfDepartment
         ' 
         cmbHeadOfDepartment.FormattingEnabled = True
-        cmbHeadOfDepartment.Location = New Point(220, 224)
+        cmbHeadOfDepartment.Location = New Point(1121, 118)
         cmbHeadOfDepartment.Name = "cmbHeadOfDepartment"
         cmbHeadOfDepartment.Size = New Size(150, 33)
         cmbHeadOfDepartment.TabIndex = 5
@@ -88,7 +88,7 @@ Partial Class Departments
         ' lblHeadOfDepartment
         ' 
         lblHeadOfDepartment.AutoSize = True
-        lblHeadOfDepartment.Location = New Point(35, 232)
+        lblHeadOfDepartment.Location = New Point(912, 118)
         lblHeadOfDepartment.Name = "lblHeadOfDepartment"
         lblHeadOfDepartment.Size = New Size(179, 25)
         lblHeadOfDepartment.TabIndex = 6
@@ -97,7 +97,7 @@ Partial Class Departments
         ' lblDescription
         ' 
         lblDescription.AutoSize = True
-        lblDescription.Location = New Point(35, 349)
+        lblDescription.Location = New Point(61, 174)
         lblDescription.Name = "lblDescription"
         lblDescription.Size = New Size(102, 25)
         lblDescription.TabIndex = 7
@@ -105,14 +105,14 @@ Partial Class Departments
         ' 
         ' txtDescription
         ' 
-        txtDescription.Location = New Point(143, 343)
+        txtDescription.Location = New Point(220, 168)
         txtDescription.Name = "txtDescription"
         txtDescription.Size = New Size(245, 31)
         txtDescription.TabIndex = 8
         ' 
         ' txtSearch
         ' 
-        txtSearch.Location = New Point(670, 52)
+        txtSearch.Location = New Point(1163, 41)
         txtSearch.Name = "txtSearch"
         txtSearch.Size = New Size(256, 31)
         txtSearch.TabIndex = 9
@@ -120,7 +120,7 @@ Partial Class Departments
         ' lblSearch
         ' 
         lblSearch.AutoSize = True
-        lblSearch.Location = New Point(490, 58)
+        lblSearch.Location = New Point(919, 47)
         lblSearch.Name = "lblSearch"
         lblSearch.Size = New Size(172, 25)
         lblSearch.TabIndex = 10
@@ -129,16 +129,16 @@ Partial Class Departments
         ' dgvDepartments
         ' 
         dgvDepartments.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvDepartments.Location = New Point(425, 89)
+        dgvDepartments.Location = New Point(35, 205)
         dgvDepartments.Name = "dgvDepartments"
         dgvDepartments.RowHeadersWidth = 62
-        dgvDepartments.Size = New Size(886, 409)
+        dgvDepartments.Size = New Size(974, 409)
         dgvDepartments.TabIndex = 11
         ' 
         ' btnAdd
         ' 
-        btnAdd.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnAdd.Location = New Point(207, 540)
+        btnAdd.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnAdd.Location = New Point(193, 635)
         btnAdd.Name = "btnAdd"
         btnAdd.Size = New Size(99, 34)
         btnAdd.TabIndex = 12
@@ -147,18 +147,18 @@ Partial Class Departments
         ' 
         ' btnUpdate
         ' 
-        btnUpdate.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnUpdate.Location = New Point(358, 540)
+        btnUpdate.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnUpdate.Location = New Point(361, 635)
         btnUpdate.Name = "btnUpdate"
-        btnUpdate.Size = New Size(99, 34)
+        btnUpdate.Size = New Size(121, 34)
         btnUpdate.TabIndex = 13
         btnUpdate.Text = "UPDATE"
         btnUpdate.UseVisualStyleBackColor = True
         ' 
         ' btnDelete
         ' 
-        btnDelete.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnDelete.Location = New Point(509, 540)
+        btnDelete.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnDelete.Location = New Point(538, 635)
         btnDelete.Name = "btnDelete"
         btnDelete.Size = New Size(99, 34)
         btnDelete.TabIndex = 14
@@ -167,8 +167,8 @@ Partial Class Departments
         ' 
         ' btnClear
         ' 
-        btnClear.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnClear.Location = New Point(654, 540)
+        btnClear.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnClear.Location = New Point(713, 635)
         btnClear.Name = "btnClear"
         btnClear.Size = New Size(99, 34)
         btnClear.TabIndex = 15
@@ -186,8 +186,8 @@ Partial Class Departments
         ' 
         ' btnBack
         ' 
-        btnBack.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnBack.Location = New Point(948, 540)
+        btnBack.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnBack.Location = New Point(1018, 635)
         btnBack.Name = "btnBack"
         btnBack.Size = New Size(99, 34)
         btnBack.TabIndex = 17
@@ -196,19 +196,19 @@ Partial Class Departments
         ' 
         ' btnRefresh
         ' 
-        btnRefresh.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnRefresh.Location = New Point(793, 540)
+        btnRefresh.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnRefresh.Location = New Point(864, 635)
         btnRefresh.Name = "btnRefresh"
-        btnRefresh.Size = New Size(99, 34)
+        btnRefresh.Size = New Size(118, 34)
         btnRefresh.TabIndex = 18
         btnRefresh.Text = "REFRESH"
         btnRefresh.UseVisualStyleBackColor = True
         ' 
         ' Departments
         ' 
-        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1461, 690)
+        ClientSize = New Size(1461, 765)
         Controls.Add(btnRefresh)
         Controls.Add(btnBack)
         Controls.Add(lblDepartmentId)

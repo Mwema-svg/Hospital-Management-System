@@ -7,8 +7,115 @@ Public Class Doctors
 
     ' Runs automatically when the Doctors form opens
     Private Sub Doctors_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        ' =================================
+        ' FORM SETTINGS
+        ' =================================
+        Me.BackColor = Color.FromArgb(230, 238, 247)
+        Me.Font = New Font("Segoe UI", 10, FontStyle.Regular)
+        Me.StartPosition = FormStartPosition.CenterScreen
+
+        ' =================================
+        ' INPUT CONTROLS
+        ' =================================
+        txtDoctorId.ReadOnly = True
+
+        Dim inputControls As Control() = {
+        txtDoctorId,
+        txtFirstName,
+        txtLastName,
+        txtPhone,
+        txtEmail,
+        txtSpecialization,
+        txtSearch,
+        cmbGender,
+        cmbDepartment
+    }
+
+        For Each ctrl As Control In inputControls
+            ctrl.Font = New Font("Segoe UI", 10, FontStyle.Regular)
+            ctrl.BackColor = Color.White
+            ctrl.ForeColor = Color.FromArgb(40, 50, 65)
+        Next
+
+        ' =================================
+        ' BUTTON COLORS
+        ' =================================
+
+        btnAdd.BackColor = Color.FromArgb(8, 126, 139)
+        btnUpdate.BackColor = Color.FromArgb(20, 45, 78)
+        btnDelete.BackColor = Color.FromArgb(201, 76, 76)
+        btnClear.BackColor = Color.FromArgb(100, 116, 139)
+        btnBack.BackColor = Color.FromArgb(20, 45, 78)
+
+        ' =================================
+        ' BUTTON FORMATTING
+        ' =================================
+        Dim buttons As Button() = {
+        btnAdd,
+        btnUpdate,
+        btnDelete,
+        btnClear,
+        btnBack
+    }
+
+        For Each btn As Button In buttons
+
+            btn.ForeColor = Color.White
+            btn.Font = New Font("Segoe UI", 10, FontStyle.Bold)
+            btn.FlatStyle = FlatStyle.Flat
+            btn.FlatAppearance.BorderSize = 0
+            btn.Cursor = Cursors.Hand
+
+        Next
+
+        ' =================================
+        ' DATA GRID VIEW
+        ' =================================
+        dgvDoctors.BackgroundColor = Color.White
+        dgvDoctors.BorderStyle = BorderStyle.None
+        dgvDoctors.GridColor = Color.FromArgb(220, 228, 238)
+
+        dgvDoctors.EnableHeadersVisualStyles = False
+
+        dgvDoctors.ColumnHeadersDefaultCellStyle.BackColor =
+        Color.FromArgb(20, 45, 78)
+
+        dgvDoctors.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
+
+        dgvDoctors.ColumnHeadersDefaultCellStyle.Font =
+        New Font("Segoe UI", 10, FontStyle.Bold)
+
+        dgvDoctors.DefaultCellStyle.Font =
+        New Font("Segoe UI", 9, FontStyle.Regular)
+
+        dgvDoctors.DefaultCellStyle.ForeColor =
+        Color.FromArgb(40, 50, 65)
+
+        dgvDoctors.DefaultCellStyle.SelectionBackColor =
+        Color.FromArgb(8, 126, 139)
+
+        dgvDoctors.DefaultCellStyle.SelectionForeColor = Color.White
+
+        dgvDoctors.AlternatingRowsDefaultCellStyle.BackColor =
+        Color.FromArgb(240, 245, 250)
+
+        dgvDoctors.RowTemplate.Height = 35
+        dgvDoctors.ColumnHeadersHeight = 40
+
+        dgvDoctors.SelectionMode =
+        DataGridViewSelectionMode.FullRowSelect
+
+        dgvDoctors.MultiSelect = False
+        dgvDoctors.ReadOnly = True
+        dgvDoctors.AllowUserToAddRows = False
+
+        ' =================================
+        ' LOAD DATA
+        ' =================================
         LoadDepartments()
         LoadDoctors()
+
     End Sub
 
     ' 1. Load Departments into the ComboBox (Assumes a Departments table with DepartmentID and DepartmentName)

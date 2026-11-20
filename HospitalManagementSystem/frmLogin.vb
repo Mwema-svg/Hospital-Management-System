@@ -95,4 +95,44 @@ Public Class frmLogin
 
     End Sub
 
+    Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        ' Form background
+        Me.BackColor = Color.FromArgb(230, 238, 247)
+
+        ' Password masking
+        txtPassword.UseSystemPasswordChar = True
+
+        ' Login button - Teal
+        btnLogin.BackColor = Color.FromArgb(8, 126, 139)
+
+        ' Create Admin button - Navy Blue
+        btnCreateAdmin.BackColor = Color.FromArgb(20, 45, 78)
+
+        ' Exit button - Indian Red
+        btnExit.BackColor = Color.FromArgb(201, 76, 76)
+
+        ' Button text
+        btnLogin.ForeColor = Color.White
+        btnCreateAdmin.ForeColor = Color.White
+        btnExit.ForeColor = Color.White
+
+        ' Flat button appearance
+        btnLogin.FlatStyle = FlatStyle.Flat
+        btnCreateAdmin.FlatStyle = FlatStyle.Flat
+        btnExit.FlatStyle = FlatStyle.Flat
+
+        ' Remove borders
+        btnLogin.FlatAppearance.BorderSize = 0
+        btnCreateAdmin.FlatAppearance.BorderSize = 0
+        btnExit.FlatAppearance.BorderSize = 0
+
+        ' Hand cursor
+        btnLogin.Cursor = Cursors.Hand
+        btnCreateAdmin.Cursor = Cursors.Hand
+        btnExit.Cursor = Cursors.Hand
+
+    End Sub
+
+
 End Class

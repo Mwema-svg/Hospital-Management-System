@@ -184,10 +184,10 @@ Partial Class Doctors
         ' lblDoctorInformation
         ' 
         lblDoctorInformation.AutoSize = True
-        lblDoctorInformation.Font = New Font("Segoe UI", 9F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        lblDoctorInformation.Font = New Font("Segoe UI", 14F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         lblDoctorInformation.Location = New Point(401, 21)
         lblDoctorInformation.Name = "lblDoctorInformation"
-        lblDoctorInformation.Size = New Size(222, 25)
+        lblDoctorInformation.Size = New Size(337, 38)
         lblDoctorInformation.TabIndex = 18
         lblDoctorInformation.TabStop = True
         lblDoctorInformation.Text = "DOCTOR INFORMATION"
@@ -259,7 +259,7 @@ Partial Class Doctors
         dgvDoctors.ReadOnly = True
         dgvDoctors.RowHeadersWidth = 62
         dgvDoctors.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dgvDoctors.Size = New Size(1121, 561)
+        dgvDoctors.Size = New Size(1303, 561)
         dgvDoctors.TabIndex = 25
         ' 
         ' btnBack
@@ -276,7 +276,7 @@ Partial Class Doctors
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1534, 762)
+        ClientSize = New Size(1716, 762)
         Controls.Add(btnBack)
         Controls.Add(dgvDoctors)
         Controls.Add(lblSearch)

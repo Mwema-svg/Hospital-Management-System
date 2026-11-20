@@ -7,13 +7,133 @@ Public Class frmPatients
 
     ' Runs automatically when the form opens
     Private Sub Patients_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Populate Gender options if not already added in the Designer
+
+        ' =================================
+        ' FORM SETTINGS
+        ' =================================
+        Me.BackColor = Color.FromArgb(230, 238, 247)
+        Me.Font = New Font("Segoe UI", 10, FontStyle.Regular)
+        Me.StartPosition = FormStartPosition.CenterScreen
+
+        ' =================================
+        ' INPUT CONTROLS
+        ' =================================
+        txtPatientID.ReadOnly = True
+
+        Dim inputControls As Control() = {
+        txtPatientID,
+        txtFullName,
+        txtPhone,
+        txtAddress,
+        txtEmergencyContact,
+        cmbGender
+    }
+
+        For Each ctrl As Control In inputControls
+            ctrl.Font = New Font("Segoe UI", 10, FontStyle.Regular)
+            ctrl.BackColor = Color.White
+            ctrl.ForeColor = Color.FromArgb(40, 50, 65)
+        Next
+
+        ' =================================
+        ' DATE PICKER
+        ' =================================
+        dtpDateOfBirth.Font = New Font("Segoe UI", 10, FontStyle.Regular)
+        dtpDateOfBirth.CalendarMonthBackground = Color.White
+
+        ' =================================
+        ' BUTTON COLORS
+        ' =================================
+
+        ' Add - Teal
+        btnAdd.BackColor = Color.FromArgb(8, 126, 139)
+
+        ' Update - Navy
+        btnUpdate.BackColor = Color.FromArgb(20, 45, 78)
+
+        ' Delete - Red
+        btnDelete.BackColor = Color.FromArgb(201, 76, 76)
+
+        ' Refresh - Blue
+        btnRefresh.BackColor = Color.FromArgb(52, 105, 160)
+
+        ' Clear - Grey
+        btnClear.BackColor = Color.FromArgb(100, 116, 139)
+
+        ' Back - Dark Navy
+        btnBack.BackColor = Color.FromArgb(20, 45, 78)
+
+        ' =================================
+        ' BUTTON FORMATTING
+        ' =================================
+        Dim buttons As Button() = {
+        btnAdd,
+        btnUpdate,
+        btnDelete,
+        btnRefresh,
+        btnClear,
+        btnBack
+    }
+
+        For Each btn As Button In buttons
+
+            btn.ForeColor = Color.White
+            btn.Font = New Font("Segoe UI", 10, FontStyle.Bold)
+            btn.FlatStyle = FlatStyle.Flat
+            btn.FlatAppearance.BorderSize = 0
+            btn.Cursor = Cursors.Hand
+
+        Next
+
+        ' =================================
+        ' DATAGRIDVIEW STYLING
+        ' =================================
+        dgvPatients.BackgroundColor = Color.White
+        dgvPatients.BorderStyle = BorderStyle.None
+        dgvPatients.GridColor = Color.FromArgb(220, 228, 238)
+
+        dgvPatients.EnableHeadersVisualStyles = False
+
+        dgvPatients.ColumnHeadersDefaultCellStyle.BackColor =
+        Color.FromArgb(20, 45, 78)
+
+        dgvPatients.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
+        dgvPatients.ColumnHeadersDefaultCellStyle.Font =
+        New Font("Segoe UI", 10, FontStyle.Bold)
+
+        dgvPatients.DefaultCellStyle.Font =
+        New Font("Segoe UI", 9, FontStyle.Regular)
+
+        dgvPatients.DefaultCellStyle.ForeColor =
+        Color.FromArgb(40, 50, 65)
+
+        dgvPatients.DefaultCellStyle.SelectionBackColor =
+        Color.FromArgb(8, 126, 139)
+
+        dgvPatients.DefaultCellStyle.SelectionForeColor = Color.White
+
+        dgvPatients.AlternatingRowsDefaultCellStyle.BackColor =
+        Color.FromArgb(240, 245, 250)
+
+        dgvPatients.RowTemplate.Height = 35
+        dgvPatients.ColumnHeadersHeight = 40
+
+        dgvPatients.SelectionMode =
+        DataGridViewSelectionMode.FullRowSelect
+
+        dgvPatients.MultiSelect = False
+        dgvPatients.ReadOnly = True
+        dgvPatients.AllowUserToAddRows = False
+
+        ' =================================
+        ' LOAD PATIENTS
+        ' =================================
         If cmbGender.Items.Count = 0 Then
             cmbGender.Items.AddRange(New Object() {"Male", "Female"})
         End If
 
-        txtPatientID.ReadOnly = True
         LoadPatients()
+
     End Sub
 
     ' 1. Load all Patients into the DataGridView
